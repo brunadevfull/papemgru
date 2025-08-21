@@ -1,144 +1,7 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
   <head>
-<!-- Só um teste para o Paulo -->
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <title>PagTesouro</title>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.2.0/css/datepicker.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <script src="jquery-3.5.1.min.js"></script>
-  <script src="jquery.mask.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://igorescobar.github.io/jQuery-Mask-Plugin/js/jquery.mask.min.js"></script>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script src="https://netdna.bootstrapcdn.com/bootstrap/2.3.2/js/bootstrap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.2.0/js/bootstrap-datepicker.min.js"></script> 
-
-  <script>
-   function ValidaForm()
-   {
-    if (!(document.forms["PagTesouro"]["codigoServico"].value >= 0 && document.forms["PagTesouro"]["codigoServico"].value <= 99999))
-    {
-     alert("Código do Serviço válido somente entre 0 e 99999");
-     return false;
-    }
-    if (!(document.forms["PagTesouro"]["referencia"].value >= 0 && document.forms["PagTesouro"]["referencia"].value <= 99999999999999999999))
-    {
-     alert("Número de Referência válido somente entre 0 e 99999999999999999999");
-     return false;
-    }
-   }
-   function FocoInicial()
-   {
-    document.getElementById("codigoServico").focus();
-   }
-   $(document).ready(function()
-   {
-    var cpfcnpjfunc=function (val)
-    {
-     if (val.length<15)
-     {
-      return '9999000.000.000-00';
-     }
-     else
-     {
-      return '00.000.000/0000-00';
-     }
-    },
-    cpfcnpjopt=
-    {
-     onKeyPress: function(val, e, field, options)
-     {
-      field.mask(cpfcnpjfunc.apply({}, arguments), options);
-      $("#jf").val(field.cleanVal());
-     },
-     reverse: true
-    };
-    $('input[name="cnpjCpf"]').val($("#jf").val());
-    $('.cpfcnpj').mask(cpfcnpjfunc, cpfcnpjopt);
-    $('.cpfcnpj').mask(cpfcnpjfunc, cpfcnpjopt);
-    $('.competencia').mask('00/0000');
-    $('.dinheiro').mask('000.000.000.000.000,00',{reverse: true});
-   });
-  </script>
-  <!--script>
-  //limpar cache
-if (!location.hash) {
-location.hash = "#reloading";
-location.reload(true);
-} else {
-location.hash = "#reloaded";
-}
-</script-->
-  <style>
-   .piscando{
-    animation:blink 1.2s infinite;
-    }
-   @keyframes blink{
-    0%{     color: #FF0000;    }
-    49%{    color: #FF0000; }
-    60%{    color: transparent; }
-    99%{    color:transparent;  }
-    100%{   color: #FF0000;    }
-	}
-	
-	#mp:hover{
-		color:#FDEE2F !important; 
-		}
-	
-     	
-	
-	
-	<!-- teste 
-	.fab{
-  position: fixed;
-  bottom:10px;
-  right:10px;
-}
-
-fab button{
-  cursor: pointer;
-  width: 48px;
-  height: 48px;
-  border-radius: 30px;
-  background-color: #cb60b3;
-  border: none;
-  box-shadow: 0 1px 5px rgba(0,0,0,.4);
-  font-size: 24px;
-  color: white;
-    
-  -webkit-transition: .2s ease-out;
-  -moz-transition: .2s ease-out;
-  transition: .2s ease-out;
-}
-
-.fab button:focus{
-  outline: none;
-}
-
-.fab button.main{
-  position: absolute;
-  width: 60px;
-  height: 60px;
-  border-radius: 30px;
-  background-color: #5b19b7;
-  right: 0;
-  bottom: 0;
-  z-index: 20;
-}
-
-.fab button.main:before{
-  content: '⏚';
-}
-   itor-->
-  </style>
-  
-
-  <!-- HTML5 element support for IE6-8 -->
-  <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-  <![endif]-->
-   <meta charset="utf-8" />
+    <meta charset="utf-8" />
 <meta name="Generator" content="Drupal 10 (https://www.drupal.org)" />
 <meta name="MobileOptimized" content="width" />
 <meta name="HandheldFriendly" content="true" />
@@ -189,10 +52,8 @@ fab button{
     <script src="https://use.fontawesome.com/releases/v6.4.2/js/all.js" defer crossorigin="anonymous"></script>
 <script src="https://use.fontawesome.com/releases/v6.4.2/js/v4-shims.js" defer crossorigin="anonymous"></script>
 
- </head>
- <link rel="stylesheet" href="w3.css">
-
- <body>
+  </head>
+  <body>
         <a href="#main-content" class="visually-hidden focusable">
       Pular para o conteúdo principal
     </a>
@@ -403,7 +264,6 @@ fab button{
           </div>
         </a>
       </div>
-      
     </div>
   </div>
 
@@ -438,37 +298,60 @@ fab button{
     </div>
   </div>
 </div>
+    
+       
+
+    
+</form>
 
 
-		<?php
-		if(isset($_GET['erro'])){
-			echo "<div style='background-color:#FF0000; width:100%; height:25px; color:white; margin-top:-40px;'><center>O campo ".$_GET['erro']." não foi preenchido, tente novamente.</center></div>";
-		}	
-		?>
-		
-      <form method="post" action="pagtesouroControl.php" name="PagTesouro" onsubmit="return ValidaForm()">
-       <br>
-	   <div class="container">
-	   <div class="row">
-	   <div class="col">
-	   <h1 style="color:#7F7F7F; font-family: 'Open Sans';">PagTesouro PAPEM</h1>
-		<p style="color:red;"><strong style="color:red;">Obs:</strong> Habilite a opção de abertura de janelas, para a melhor utilização do sistema.</p>
-	 <select class="form-control" id="exampleFormControlSelect1" name="naturezaD">
-	  <option checked>Qual a natureza da devolução?</option>
+          </div>
+      </div>
+    </div>
+  </div>
+
+
+</header>
+
+  
+
+   
+<main class="pb-5 pt-3">
+  <div class="container d-flex flex-column">
+    <div id="block-govbr-page-title">
+  
+    
+      
+  <h1></h1>
+
+
+  </div>
+
+
+
+    <div data-drupal-messages-fallback class="hidden"></div><div id="block-govbr-testando">
+  
+      <h2>PagTesouro PAPEM</h2>
+    
+      <br>
+ 
+<p style="color:red;"><strong style="color:red;">Obs:</strong> Habilite a opção de abertura de janelas, para a melhor utilização do sistema.</p>
+   <select class="form-control" id="exampleFormControlSelect1" name="naturezaD">
+    <option checked>Qual a natureza da devolução?</option>
       <option onclick="pagamentoPessoal()" value="Ppessoal" onclick="zerarRadio()">Pagamento de pessoal</option><!-- codigo recolhimento: 68801-0 -->
       <option onclick="mostrarRecAtivos()" value="recAtivos" onclick="zerarRadio()">Recuperação de Ativos (somente para o uso do SVPM)</option>
       <option onclick="mostrarSisres()" value="Sisres" onclick="zerarRadio()">SISRES</option><!-- codigo recolhimento: 68801-0 -->
     </select>
-	    <br>
-		<!-- PAGAMENTO PESSOAL -->
-		<select class="form-control" id="pp" style="display:none;" name="situacaoFuncional">
-	  <option checked>Qual a situação funcional?</option>
+      <br>
+    <!-- PAGAMENTO PESSOAL -->
+    <select class="form-control" id="pp" style="display:none;" name="situacaoFuncional">
+    <option checked>Qual a situação funcional?</option>
       <option onclick="mostrarServidorCivil()" value="servidorCivil" onclick="zerarRadio()">Servidor Civil</option>
       <option onclick="mostrarMilitarAtiva()" value="militarAtivo" onclick="zerarRadio()">Militar/Pensionista/Veterano/Anistiado/Ex-Militar</option>
     </select>
 
     <select class="form-control" id="ativa9" style="display:none; margin-top:15px;" name="naoutilizado">
-	  <option checked>Qual a situação funcional?</option>
+    <option checked>Qual a situação funcional?</option>
       <option>Militar Ativo</option>
 <option>Ex-Militar</option>
 
@@ -476,70 +359,87 @@ fab button{
       <option>Veterano</option>
       <option>Anistiado</option>
     </select>
-	
-	<!-- REC ATIVOS -->
-	<input class="form-control" placeholder="Nome Completo" name="recAtivos_nome" type="text" class="competencia" style="display:none;" id="recAtivos1" maxlength="80" minlength="3">	
-	<input class="form-control" placeholder="CPF" name="recAtivos_cpf" type="text" class="competencia" style="display:none; margin-top: 2%;" id="recAtivos2" onkeypress="return onlynumber();">
-	<input class="form-control" placeholder="NIP" name="recAtivos_Nip" type="text" class="cpfcnpj" style="display:none; margin-top: 2%;" id="recAtivos3" onkeypress="return onlynumber();">
-	<input class="form-control" placeholder="Valor do Exercício Atual" name="recAtivos_exAtual" type="text" style="display:none; margin-top: 2%;" id="recAtivos4" onKeyPress="return(moeda(this,'.',',',event))" maxlength="14">
-	<input class="form-control" placeholder="Valor do Exercício Anterior" name="recAtivos_exAnterior" type="text" style="display:none; margin-top: 2%; margin-bottom:-150px;" id="recAtivos5" onKeyPress="return(moeda(this,'.',',',event))" maxlength="14">
-	<!--input class="form-control" placeholder="Exercicio Anterior" type="number" style="display:none; margin-top: 2%; width:950;" id="servidorBruto" name="recAtivos_exAnterior" onKeyPress="return(moeda(this,'.',',',event))">-->
-	
-	<!-- SISRES -->
-		<select class="form-control" id="ativarsisres" name="tipoSisres" style="display:none">
-	  <option checked>Qual a situação funcional?</option>
+  
+  <!-- REC ATIVOS -->
+  <input class="form-control" placeholder="Nome Completo" name="recAtivos_nome" type="text" class="competencia" style="display:none;" id="recAtivos1" maxlength="80" minlength="3"> 
+  <input class="form-control" placeholder="CPF" name="recAtivos_cpf" type="text" class="competencia" style="display:none; margin-top: 2%;" id="recAtivos2" onkeypress="return onlynumber();">
+  <input class="form-control" placeholder="NIP" name="recAtivos_Nip" type="text" class="cpfcnpj" style="display:none; margin-top: 2%;" id="recAtivos3" onkeypress="return onlynumber();">
+  <input class="form-control" placeholder="Valor do Exercício Atual" name="recAtivos_exAtual" type="text" style="display:none; margin-top: 2%;" id="recAtivos4" onKeyPress="return(moeda(this,'.',',',event))" maxlength="14">
+  <input class="form-control" placeholder="Valor do Exercício Anterior" name="recAtivos_exAnterior" type="text" style="display:none; margin-top: 2%; margin-bottom:-150px;" id="recAtivos5" onKeyPress="return(moeda(this,'.',',',event))" maxlength="14">
+  <!--input class="form-control" placeholder="Exercicio Anterior" type="number" style="display:none; margin-top: 2%; width:950;" id="servidorBruto" name="recAtivos_exAnterior" onKeyPress="return(moeda(this,'.',',',event))">-->
+  
+  <!-- SISRES -->
+    <select class="form-control" id="ativarsisres" name="tipoSisres" style="display:none">
+    <option checked>Qual a situação funcional?</option>
       <option onclick="mostrarSisresSC()" value="SisresSC">Servidor Civil</option>
       <option onclick="mostrarSisresOutros()" value="SisresOutros">Militar/Pensionista/Veterano/Anistiado/Ex-Militar</option>
     </select>
-    <input class="form-control" placeholder="Nome Completo" name="sisresSC_nome" type="text" class="competencia" style="display:none; margin-top: 2%;" id="sisresSC1" maxlength="80" minlength="3">	
-	<input class="form-control" placeholder="CPF" name="sisresSC_cpf" type="text" class="competencia" style="display:none; margin-top: 2%;" id="sisresSC2" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
-	<input class="form-control" placeholder="Matricula SIAPE" name="sisresSC_MatSIAPE" type="text" class="cpfcnpj" style="display:none; margin-top: 2%;" id="sisresSC3" maxlength="7">
-	<input class="form-control" placeholder="Valor a ser recolhido" name="sisresSC_valorRecolhido" type="text" class="competencia" style="display:none; margin-top: 2%; margin-bottom:-50%;" onKeyPress="return(moeda(this,'.',',',event))" id="sisresSC4">
-	<!--<form>
-	<INPUT TYPE="RADIO" NAME="OPCAO" VALUE="op1" id="tributavel1" style="display:none" onclick="mostrarValorTributavel()"> <label id="tributavel2" style="display:none; margin-right:10%;">Tributavel</label>
+    <input class="form-control" placeholder="Nome Completo" name="sisresSC_nome" type="text" class="competencia" style="display:none; margin-top: 2%;" id="sisresSC1" maxlength="80" minlength="3"> 
+  <input class="form-control" placeholder="CPF" name="sisresSC_cpf" type="text" class="competencia" style="display:none; margin-top: 2%;" id="sisresSC2" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+  <input class="form-control" placeholder="Matricula SIAPE" name="sisresSC_MatSIAPE" type="text" class="cpfcnpj" style="display:none; margin-top: 2%;" id="sisresSC3" maxlength="7">
+  <input class="form-control" placeholder="Valor a ser recolhido" name="sisresSC_valorRecolhido" type="text" class="competencia" style="display:none; margin-top: 2%; margin-bottom:-50%;" onKeyPress="return(moeda(this,'.',',',event))" id="sisresSC4">
+  <!--<form>
+  <INPUT TYPE="RADIO" NAME="OPCAO" VALUE="op1" id="tributavel1" style="display:none" onclick="mostrarValorTributavel()"> <label id="tributavel2" style="display:none; margin-right:10%;">Tributavel</label>
     <INPUT TYPE="RADIO" NAME="OPCAO" VALUE="op2" id="ntribuavel1" style="display:none" onclick="mostrarValorNaoTributavel()"> <label id="ntributavel2" style="display:none">Nao tributavel</label>
     </form>-->
-	<!--<input class="form-control" placeholder="OC" name="sisresOutros_OC" type="text" class="cpfcnpj" style="display:none; margin-top: 2%;" id="sisresOutros1">-->
-    <input class="form-control" placeholder="Nome Completo" name="sisresOutros_nome" type="text" class="competencia" style="display:none; margin-top: 2%;" id="sisresOutros1" maxlength="80" minlength="3">	
-	<input class="form-control" placeholder="CPF" name="sisresOutros_cpf" type="text" class="competencia" style="display:none; margin-top: 2%;" id="sisresOutros2" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
-	<input class="form-control" placeholder="NIP" name="sisresOutros_Nip" type="text" class="cpfcnpj" style="display:none; margin-top: 2%;" id="sisresOutros3" maxlength="9" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
-	<input class="form-control" placeholder="Valor a ser recolhido" name="sisresOutros_valorRecolhido" type="text" class="competencia" style="display:none; margin-top: 2%; margin-bottom:-50%;" onKeyPress="return(moeda(this,'.',',',event))" id="sisresOutros4">
-	<!--<input class="form-control" placeholder="OC" name="sisresOutros_OC" type="text" class="cpfcnpj" style="display:none; margin-top: 2%;" id="sisresOutros4">
-	<div id="resultado2"></div>-->
-	
-	<!--<input class="form-control" placeholder="Valor a ser recolhido" name="sisresOutros_Valor" type="text" style="display:none; margin-top: 2%;" id="sisresOutros3" onKeyUp="mascaraMoeda(this, event)">
-    input class="form-control" placeholder="OM recolhedora" name="sisresOutros_Recolhedora" type="text" style="display:none; margin-top: 2%;" id="sisresOutros6"-->		
-	<br>
-	<table style="text-align: left; width: 80%; margin-left:10%;" border="0" cellpadding="2" cellspacing="2">
+  <!--<input class="form-control" placeholder="OC" name="sisresOutros_OC" type="text" class="cpfcnpj" style="display:none; margin-top: 2%;" id="sisresOutros1">-->
+    <input class="form-control" placeholder="Nome Completo" name="sisresOutros_nome" type="text" class="competencia" style="display:none; margin-top: 2%;" id="sisresOutros1" maxlength="80" minlength="3"> 
+  <input class="form-control" placeholder="CPF" name="sisresOutros_cpf" type="text" class="competencia" style="display:none; margin-top: 2%;" id="sisresOutros2" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+  <input class="form-control" placeholder="NIP" name="sisresOutros_Nip" type="text" class="cpfcnpj" style="display:none; margin-top: 2%;" id="sisresOutros3" maxlength="9" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+  <input class="form-control" placeholder="Valor a ser recolhido" name="sisresOutros_valorRecolhido" type="text" class="competencia" style="display:none; margin-top: 2%; margin-bottom:-50%;" onKeyPress="return(moeda(this,'.',',',event))" id="sisresOutros4">
+  <!--<input class="form-control" placeholder="OC" name="sisresOutros_OC" type="text" class="cpfcnpj" style="display:none; margin-top: 2%;" id="sisresOutros4">
+  <div id="resultado2"></div>-->
+  
+  <!--<input class="form-control" placeholder="Valor a ser recolhido" name="sisresOutros_Valor" type="text" style="display:none; margin-top: 2%;" id="sisresOutros3" onKeyUp="mascaraMoeda(this, event)">
+    input class="form-control" placeholder="OM recolhedora" name="sisresOutros_Recolhedora" type="text" style="display:none; margin-top: 2%;" id="sisresOutros6"-->   
+  <br>
+  <table style="text-align: left; width: 80%; margin-left:10%;" border="0" cellpadding="2" cellspacing="2">
     <tbody>
-	<!-- Teste 
-	<div class="fab">
-	<button class="main">
-	</button>
-	<ul>
-	</ul>
-	</div>
-	Itor -->
-	<!-- Linha um -->
-	<td style="vertical-align: middle; width: 100%; text-align: center; border:0;">			
+  <!-- Teste 
+  <div class="fab">
+  <button class="main">
+  </button>
+  <ul>
+  </ul>
+  </div>
+  Itor -->
+  <!-- Linha um -->
+  <td style="vertical-align: middle; width: 100%; text-align: center;">     
            <label style="display:none" id="servidor1" ></label>
-		       <label style="display:none" id="ativa1" ></label>
+           <label style="display:none" id="ativa1" ></label>
            <br>
            <input class="form-control" placeholder="Nome Completo" type="text" class="competencia" style="display:none; width: 950px; height: 38px; margin-left: 25px; padding: 8px 12px;" id="servidor2" name="servidorNome" maxlength="80" minlength="3">
            <input class="form-control" placeholder="Nome Completo" name="ativaNome" type="text" class="competencia" style="display:none; width: 950px; height: 38px; margin-left: 25px; padding: 8px 12px;" id="ativa2" maxlength="80" minlength="3">
-		   <br>
+       <br>
           
            <label style="display:none" id="servidor3" ></label>
-		   <label style="display:none" id="ativa3" ></label>
+       <label style="display:none" id="ativa3" ></label>
            <label style="display:none; margin:10px; margin-left:-550px;" id="sisresSC5" ></label>
-		   <label style="display:none; margin:10px; margin-left:-550px;" id="sisresOutros5" ></label>
-		   <br>
+       <label style="display:none; margin:10px; margin-left:-550px;" id="sisresOutros5" ></label>
+       <br>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script src="https://netdna.bootstrapcdn.com/bootstrap/2.3.2/js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.2.0/js/bootstrap-datepicker.min.js"></script>
 
  
 <input class="form-control" placeholder="Processo de pagamento do recebimento indevido" type="text" style="display:none; width: 950px; height: 38px; margin-left: 25px; padding: 8px 12px;" id="servidor4" name="servidor4">
+
+
+
+
+
+            
+</div>
+
+
+
+</div>
+  </main>
+
+
+
+  </div>
+
 
 <script>
 
@@ -598,76 +498,76 @@ minViewMode: "months"
 });
 </script>
            
-		   <br>
+       <br>
           </td>
-		  </tr>
-		  <!-- Linha dois -->
-	<tr>	  
-	<td style="vertical-align: middle; width: 50%; text-align: center; border:0;">
+      </tr>
+      <!-- Linha dois -->
+  <tr>    
+  <td style="vertical-align: middle; width: 50%; text-align: center;">
            <label style="display:none" id="servidor5" ></label>
-		   <label style="display:none" id="ativa5" ></label>
+       <label style="display:none" id="ativa5" ></label>
            <br>
-		   
+       
            
            <input class="form-control" placeholder="CPF" name="ativaCpfCnpj" type="text" class="competencia" style="display:none; width: 950px; height: 38px; margin-left: 25px; padding: 8px 12px;" id="ativa6" class="cpfcnpj" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" maxlength="11">
-		   <br>
+       <br>
             
-		  
+      
            
-		   <label style="display:none" id="ativa7">NIP</label>
-		   <br>
-		   
+       <label style="display:none" id="ativa7">NIP</label>
+       <br>
+       
            <input class="form-control" placeholder="NIP" name="ativaNip" type="text" class="competencia" style="display:none; width: 950px; height: 38px; margin-left: 25px; padding: 8px 12px;" id="ativa8" maxlength="9" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">  
           </td>
         
-		  <center>
-		  <INPUT TYPE="RADIO" NAME="TipoTributo" VALUE="1" id="tributavel1" style="display:none; margin-top:1.5%;" onclick="mostrarValorTributavel()"> <label id="tributavel2" style="display:none; margin-right:10%;">Tributável</label>
+      <center>
+      <INPUT TYPE="RADIO" NAME="TipoTributo" VALUE="1" id="tributavel1" style="display:none; margin-top:1.5%;" onclick="mostrarValorTributavel()"> <label id="tributavel2" style="display:none; margin-right:10%;">Tributável</label>
           <INPUT TYPE="RADIO" NAME="TipoTributo" VALUE="2" id="ntribuavel1" style="display:none;" onclick="mostrarValorNaoTributavel()" checked> <label id="ntributavel2" style="display:none">Não tributável</label>
           <br>
-		  <input class="form-control" placeholder="Valor Bruto a ser recolhido" type="text" style="display:none; width:950; margin: 10px -25px 0px 0px;" id="servidorBruto" name="valorBruto" onKeyPress="return(moeda(this,'.',',',event))" maxlength="14">
-		  <input class="form-control" placeholder="Valor Líquido a ser recolhido" type="text" style="display:none; width:950; margin: 10px -25px 0px 0px;" id="servidorLiquido" name="valorLiquido" onKeyPress="return(moeda(this,'.',',',event))" maxlength="14">
-	      </center>
-		   <br>
-		  
-			          
-		   
-		  <!-- Linha tres -->
-	<tr>	  
-	<td style="vertical-align: middle; width: 50%; text-align: center; border:0;">
-		   <label style="display:none" id="ativa9" ></label>
+      <input class="form-control" placeholder="Valor Bruto a ser recolhido" type="text" style="display:none; width:950; margin: 10px -25px 0px 0px;" id="servidorBruto" name="valorBruto" onKeyPress="return(moeda(this,'.',',',event))" maxlength="14">
+      <input class="form-control" placeholder="Valor Líquido a ser recolhido" type="text" style="display:none; width:950; margin: 10px -25px 0px 0px;" id="servidorLiquido" name="valorLiquido" onKeyPress="return(moeda(this,'.',',',event))" maxlength="14">
+        </center>
+       <br>
+      
+                
+       
+      <!-- Linha tres -->
+  <tr>    
+  <td style="vertical-align: middle; width: 50%; text-align: center;">
+       <label style="display:none" id="ativa9" ></label>
           </td>
           <center><?php
-		  include "parcela_devolvida_SC.php";
-		  include "parcela_devolvida_ativa.php";
-		  ?></center>
-		 
-		   <!--<label style="display:none" id="VeteranoAnistiado11" >Parcela devolvidas</label>
-		   <label style="display:none" id="pensionista11" >Parcela devolvidas</label>
-		   <label style="display:none" id="ativa11" >Parcela devolvidas</label>
-		   <br>
+      include "parcela_devolvida_SC.php";
+      include "parcela_devolvida_ativa.php";
+      ?></center>
+     
+       <!--<label style="display:none" id="VeteranoAnistiado11" >Parcela devolvidas</label>
+       <label style="display:none" id="pensionista11" >Parcela devolvidas</label>
+       <label style="display:none" id="ativa11" >Parcela devolvidas</label>
+       <br>
            <input class="form-control" placeholder="Valor" name="veteranoParcelasDevolvidas" type="text" class="competencia" style="display:none" id="VeteranoAnistiado12">
-		   <input class="form-control" placeholder="Valor" name="pensionistaParcelasDevolvidas" type="text" class="competencia" style="display:none" id="pensionista12">
-		   <input class="form-control" placeholder="Valor" name="ativaParcelasDevolvidas" type="text" class="competencia" style="display:none" id="ativa12">-->
-		   
-		</tr>
-		<center><?php include "parcela_devolvida.php"; ?>
-		<br><?php include "lista_sisresOutros_OC.php"; ?>
-		<?php include "lista_sisresOutros_UPAG.php"; ?>
-		<?php include "sisresOutros_Recolhedora.php"; ?>
+       <input class="form-control" placeholder="Valor" name="pensionistaParcelasDevolvidas" type="text" class="competencia" style="display:none" id="pensionista12">
+       <input class="form-control" placeholder="Valor" name="ativaParcelasDevolvidas" type="text" class="competencia" style="display:none" id="ativa12">-->
+       
+    </tr>
+    <center><?php include "parcela_devolvida.php"; ?>
+    <br><?php include "lista_sisresOutros_OC.php"; ?>
+    <?php include "lista_sisresOutros_UPAG.php"; ?>
+    <?php include "sisresOutros_Recolhedora.php"; ?>
 
         
-		<input class="form-control" placeholder="CPF" type="text" class="competencia" style="display:none; width:950px; margin-top:10px; margin-left:25px;" id="servidor6" class="cpfcnpj" name="servidorcpfcnpj" onkeypress="return onlynumber();" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" maxlength="11">
-        <input class="form-control" placeholder="Matricula SIAPE" name="servidor_MatSIAPE" type="text" style="display:none; width: 950px; height: 38px; margin-left: 25px; margin-top:15px; padding: 8px 12px;" id="servidor8" maxlength="7">		
-		</center>
-	</tbody>
-	</table>
-	<!--img src="bp.png" style="position: relative; height:25; z-index:2; margin-top:-405px; margin-left: 10px;"></img-->
-	<center><textarea id="storyPP" name="storyPP" placeholder="Motivo do recolhimento" rows="5" cols="33" style="display:none; margin-top:10px; padding: 8px 12px;" maxlength="200"></textarea></center>
+    <input class="form-control" placeholder="CPF" type="text" class="competencia" style="display:none; width:950px; margin-top:10px; margin-left:25px;" id="servidor6" class="cpfcnpj" name="servidorcpfcnpj" onkeypress="return onlynumber();" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" maxlength="11">
+        <input class="form-control" placeholder="Matricula SIAPE" name="servidor_MatSIAPE" type="text" style="display:none; width: 950px; height: 38px; margin-left: 25px; margin-top:15px; padding: 8px 12px;" id="servidor8" maxlength="7">   
+    </center>
+  </tbody>
+  </table>
+  <!--img src="bp.png" style="position: relative; height:25; z-index:2; margin-top:-405px; margin-left: 10px;"></img-->
+  <center><textarea id="storyPP" name="storyPP" placeholder="Motivo do recolhimento" rows="5" cols="33" style="display:none; margin-top:10px; padding: 8px 12px;" maxlength="200"></textarea></center>
      <center><textarea id="story" name="story" placeholder="Motivo do recolhimento" rows="5" cols="33" style="display:none; margin-top:-5%; padding: 8px 12px;" maxlength="200"></textarea></center>
-	 <center><button type="submit" id="btnConfirmar" class="btn btn-success" style="margin-top:15px; margin-bottom:15px; display:none;">confirmar</button></center>
-	</form>
+   <center><button type="submit" id="btnConfirmar" class="btn btn-success" style="margin-top:15px; margin-bottom:15px; display:none;">confirmar</button></center>
+  </form>
 
-		
+    
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
  <!-- abaixo está o JavaScript responsavel por ocultar e fazer os campos aparecerem na pagina --> 
 <script>
@@ -1293,7 +1193,7 @@ var liquido = document.querySelector("#servidorLiquido");
 
 bruto.style.display = "inline";
 liquido.style.display = "inline";
-	
+  
 }
 
 function mostrarValorNaoTributavel(){
@@ -1302,7 +1202,7 @@ var liquido = document.querySelector("#servidorLiquido");
 
 bruto.style.display = "inline";
 liquido.style.display = "none";
-	
+  
 }
 
 function mostrarRecAtivos(){
@@ -1435,27 +1335,27 @@ function onlynumber(evt) {
 
 //buscar nome trabalha com a função sql, pra ativar a pesquisa em tempo real
 function buscarNome(nome){
-	$.ajax({
-		url: "search.php",
-		method: "POST",
-		data:{nome:nome},
-		success: function(data){
-			$('#resultado').html(data)               ;
-		}
-	});	
+  $.ajax({
+    url: "search.php",
+    method: "POST",
+    data:{nome:nome},
+    success: function(data){
+      $('#resultado').html(data)               ;
+    }
+  }); 
 }
 $(document).ready(function(){
-	buscarNome();
-	
-	$('#municiamento2').keyup(function(){
-		var nome = $(this).val();
-		if (nome != ''){
-			buscarNome(nome);
-		}else{
-			buscarNome();
-		}
-	});
-});	;
+  buscarNome();
+  
+  $('#municiamento2').keyup(function(){
+    var nome = $(this).val();
+    if (nome != ''){
+      buscarNome(nome);
+    }else{
+      buscarNome();
+    }
+  });
+}); ;
 
 $(document).ready(function(){
                 
@@ -1474,57 +1374,57 @@ $(document).ready(function(){
             });
 
 function buscarNome2(nome){
-	$.ajax({
-		url: "consultar.php",
-		method: "POST",
-		data:{nome:nome},
-		success: function(data){
-			$('#resultado2').html(data);
-		}
-	});	
+  $.ajax({
+    url: "consultar.php",
+    method: "POST",
+    data:{nome:nome},
+    success: function(data){
+      $('#resultado2').html(data);
+    }
+  }); 
 }
 $(document).ready(function(){
-	buscarNome2();
-	
-	$('#sisresOutros4').keyup(function(){
-		var nome = $(this).val();
-		if (nome != ''){
-			buscarNome2(nome);
-		}else{
-			buscarNome2();
-			buscarN
-		}
-	});
-});	;
+  buscarNome2();
+  
+  $('#sisresOutros4').keyup(function(){
+    var nome = $(this).val();
+    if (nome != ''){
+      buscarNome2(nome);
+    }else{
+      buscarNome2();
+      buscarN
+    }
+  });
+}); ;
 
 //Evitando Sql Inject - impedindo que o usuario insira caractere especial
 //Nome Completo
-		document.getElementById("ativa2").onkeypress = function(e) {
+    document.getElementById("ativa2").onkeypress = function(e) {
          var chr = String.fromCharCode(e.which);
          if ("1234567890qwertyuioplkjhgfdsazxcvbnmQWERTYUIOPLKJHGFDSAZXCVBNM ".indexOf(chr) < 0)
            return false;
        };
-	   
-	   document.getElementById("servidor7").onkeypress = function(e) {
+     
+     document.getElementById("servidor7").onkeypress = function(e) {
          var chr = String.fromCharCode(e.which);
          if ("1234567890qwertyuioplkjhgfdsazxcvbnmQWERTYUIOPLKJHGFDSAZXCVBNM ".indexOf(chr) < 0)
            return false;
        };
-	   
-	   document.getElementById("servidor2").onkeypress = function(e) {
+     
+     document.getElementById("servidor2").onkeypress = function(e) {
          var chr = String.fromCharCode(e.which);
          if ("1234567890qwertyuioplkjhgfdsazxcvbnmQWERTYUIOPLKJHGFDSAZXCVBNM ".indexOf(chr) < 0)
            return false;
        };
-	   
-	   
-	   document.getElementById("ativa6").onkeypress = function(e) {
+     
+     
+     document.getElementById("ativa6").onkeypress = function(e) {
          var chr = String.fromCharCode(e.which);
          if ("1234567890qwertyuioplkjhgfdsazxcvbnmQWERTYUIOPLKJHGFDSAZXCVBNM ".indexOf(chr) < 0)
            return false;
        };
-	   
-	   document.getElementById("servidor6").onkeypress = function(e) {
+     
+     document.getElementById("servidor6").onkeypress = function(e) {
          var chr = String.fromCharCode(e.which);
          if ("1234567890qwertyuioplkjhgfdsazxcvbnmQWERTYUIOPLKJHGFDSAZXCVBNM ".indexOf(chr) < 0)
            return false;
@@ -1532,7 +1432,7 @@ $(document).ready(function(){
 
 //NIP
 
-	   document.getElementById("ativa7").onkeypress = function(e) {
+     document.getElementById("ativa7").onkeypress = function(e) {
          var chr = String.fromCharCode(e.which);
          if ("1234567890qwertyuioplkjhgfdsazxcvbnmQWERTYUIOPLKJHGFDSAZXCVBNM ".indexOf(chr) < 0)
            return false;
@@ -1540,7 +1440,7 @@ $(document).ready(function(){
 
 //MOTIVO
 
-	   document.getElementById("storyPP").onkeypress = function(e) {
+     document.getElementById("storyPP").onkeypress = function(e) {
          var chr = String.fromCharCode(e.which);
          if ("1234567890qwertyuioplkjhgfdsazxcvbnmQWERTYUIOPLKJHGFDSAZXCVBNM ".indexOf(chr) < 0)
            return false;
@@ -1552,45 +1452,46 @@ $(document).ready(function(){
            return false;
        };
 
-//SISRES 	
+//SISRES  
 
-	   document.getElementById("sisresSC1").onkeypress = function(e) {
-         var chr = String.fromCharCode(e.which);
-         if ("1234567890qwertyuioplkjhgfdsazxcvbnmQWERTYUIOPLKJHGFDSAZXCVBNM ".indexOf(chr) < 0)
-           return false;
-       };
-
-	   document.getElementById("sisresSC2").onkeypress = function(e) {
+     document.getElementById("sisresSC1").onkeypress = function(e) {
          var chr = String.fromCharCode(e.which);
          if ("1234567890qwertyuioplkjhgfdsazxcvbnmQWERTYUIOPLKJHGFDSAZXCVBNM ".indexOf(chr) < 0)
            return false;
        };
 
-	   document.getElementById("sisresSC3").onkeypress = function(e) {
+     document.getElementById("sisresSC2").onkeypress = function(e) {
          var chr = String.fromCharCode(e.which);
          if ("1234567890qwertyuioplkjhgfdsazxcvbnmQWERTYUIOPLKJHGFDSAZXCVBNM ".indexOf(chr) < 0)
            return false;
        };
-	   
-	   document.getElementById("sisresOutros1").onkeypress = function(e) {
+
+     document.getElementById("sisresSC3").onkeypress = function(e) {
          var chr = String.fromCharCode(e.which);
          if ("1234567890qwertyuioplkjhgfdsazxcvbnmQWERTYUIOPLKJHGFDSAZXCVBNM ".indexOf(chr) < 0)
            return false;
        };
-	   
-	   document.getElementById("sisresOutros2").onkeypress = function(e) {
+     
+     document.getElementById("sisresOutros1").onkeypress = function(e) {
          var chr = String.fromCharCode(e.which);
          if ("1234567890qwertyuioplkjhgfdsazxcvbnmQWERTYUIOPLKJHGFDSAZXCVBNM ".indexOf(chr) < 0)
            return false;
        };
-	   
-	   document.getElementById("sisresOutros3").onkeypress = function(e) {
+     
+     document.getElementById("sisresOutros2").onkeypress = function(e) {
+         var chr = String.fromCharCode(e.which);
+         if ("1234567890qwertyuioplkjhgfdsazxcvbnmQWERTYUIOPLKJHGFDSAZXCVBNM ".indexOf(chr) < 0)
+           return false;
+       };
+     
+     document.getElementById("sisresOutros3").onkeypress = function(e) {
          var chr = String.fromCharCode(e.which);
          if ("1234567890qwertyuioplkjhgfdsazxcvbnmQWERTYUIOPLKJHGFDSAZXCVBNM ".indexOf(chr) < 0)
            return false;
        }; 
 </script>
 
+    
     <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/papem\/","scriptPath":null,"pathPrefix":"pt-br\/","currentPath":"node","currentPathIsAdmin":false,"isFront":true,"currentLanguage":"pt-br"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"eu_cookie_compliance":{"cookie_policy_version":"1.0.0","popup_enabled":true,"popup_agreed_enabled":false,"popup_hide_agreed":false,"popup_clicking_confirmation":false,"popup_scrolling_confirmation":false,"popup_html_info":"\u003Cdiv aria-labelledby=\u0022popup-text\u0022  class=\u0022eu-cookie-compliance-banner eu-cookie-compliance-banner-info eu-cookie-compliance-banner--opt-in\u0022\u003E\n  \u003Cdiv class=\u0022popup-content info eu-cookie-compliance-content\u0022\u003E\n        \u003Cdiv id=\u0022popup-text\u0022 class=\u0022eu-cookie-compliance-message\u0022 role=\u0022document\u0022\u003E\n      \u003Ch2\u003EUsamos cookies neste site para melhorar sua experi\u00eancia de usu\u00e1rio\u003C\/h2\u003E\n\u003Cp\u003EAo clicar no bot\u00e3o Aceitar, voc\u00ea concorda que o fa\u00e7amos.\u003C\/p\u003E\n\n              \u003Cbutton type=\u0022button\u0022 class=\u0022find-more-button eu-cookie-compliance-more-button\u0022\u003EMais informa\u00e7\u00f5es\u003C\/button\u003E\n          \u003C\/div\u003E\n\n    \n    \u003Cdiv id=\u0022popup-buttons\u0022 class=\u0022eu-cookie-compliance-buttons\u0022\u003E\n            \u003Cbutton type=\u0022button\u0022 class=\u0022agree-button eu-cookie-compliance-secondary-button button button--small\u0022\u003EAceitar\u003C\/button\u003E\n              \u003Cbutton type=\u0022button\u0022 class=\u0022decline-button eu-cookie-compliance-default-button button button--small button--primary\u0022\u003EN\u00e3o, obrigado\u003C\/button\u003E\n          \u003C\/div\u003E\n  \u003C\/div\u003E\n\u003C\/div\u003E","use_mobile_message":false,"mobile_popup_html_info":"\u003Cdiv aria-labelledby=\u0022popup-text\u0022  class=\u0022eu-cookie-compliance-banner eu-cookie-compliance-banner-info eu-cookie-compliance-banner--opt-in\u0022\u003E\n  \u003Cdiv class=\u0022popup-content info eu-cookie-compliance-content\u0022\u003E\n        \u003Cdiv id=\u0022popup-text\u0022 class=\u0022eu-cookie-compliance-message\u0022 role=\u0022document\u0022\u003E\n      \n              \u003Cbutton type=\u0022button\u0022 class=\u0022find-more-button eu-cookie-compliance-more-button\u0022\u003EMais informa\u00e7\u00f5es\u003C\/button\u003E\n          \u003C\/div\u003E\n\n    \n    \u003Cdiv id=\u0022popup-buttons\u0022 class=\u0022eu-cookie-compliance-buttons\u0022\u003E\n            \u003Cbutton type=\u0022button\u0022 class=\u0022agree-button eu-cookie-compliance-secondary-button button button--small\u0022\u003EAceitar\u003C\/button\u003E\n              \u003Cbutton type=\u0022button\u0022 class=\u0022decline-button eu-cookie-compliance-default-button button button--small button--primary\u0022\u003EN\u00e3o, obrigado\u003C\/button\u003E\n          \u003C\/div\u003E\n  \u003C\/div\u003E\n\u003C\/div\u003E","mobile_breakpoint":768,"popup_html_agreed":false,"popup_use_bare_css":false,"popup_height":"auto","popup_width":"100%","popup_delay":1000,"popup_link":"https:\/\/www.marinha.mil.br\/politica-de-privacidade","popup_link_new_window":true,"popup_position":false,"fixed_top_position":true,"popup_language":"pt-br","store_consent":true,"better_support_for_screen_readers":false,"cookie_name":"","reload_page":false,"domain":"","domain_all_sites":false,"popup_eu_only":false,"popup_eu_only_js":false,"cookie_lifetime":100,"cookie_session":0,"set_cookie_session_zero_on_disagree":0,"disagree_do_not_show_popup":false,"method":"opt_in","automatic_cookies_removal":true,"allowed_cookies":"","withdraw_markup":"\u003Cbutton type=\u0022button\u0022 class=\u0022eu-cookie-withdraw-tab\u0022\u003EConfigura\u00e7\u00f5es de privacidade\u003C\/button\u003E\n\u003Cdiv aria-labelledby=\u0022popup-text\u0022 class=\u0022eu-cookie-withdraw-banner\u0022\u003E\n  \u003Cdiv class=\u0022popup-content info eu-cookie-compliance-content\u0022\u003E\n    \u003Cdiv id=\u0022popup-text\u0022 class=\u0022eu-cookie-compliance-message\u0022 role=\u0022document\u0022\u003E\n      \u003Ch2\u003EUsamos cookies neste site para melhorar sua experi\u00eancia de usu\u00e1rio\u003C\/h2\u003E\n\u003Cp\u003EVoc\u00ea deu seu consentimento para definirmos cookies.\u003C\/p\u003E\n\n    \u003C\/div\u003E\n    \u003Cdiv id=\u0022popup-buttons\u0022 class=\u0022eu-cookie-compliance-buttons\u0022\u003E\n      \u003Cbutton type=\u0022button\u0022 class=\u0022eu-cookie-withdraw-button  button button--small button--primary\u0022\u003ERetirar consentimento\u003C\/button\u003E\n    \u003C\/div\u003E\n  \u003C\/div\u003E\n\u003C\/div\u003E","withdraw_enabled":true,"reload_options":0,"reload_routes_list":"","withdraw_button_on_info_popup":false,"cookie_categories":[],"cookie_categories_details":[],"enable_save_preferences_button":true,"cookie_value_disagreed":"0","cookie_value_agreed_show_thank_you":"1","cookie_value_agreed":"2","containing_element":"body","settings_tab_enabled":false,"olivero_primary_button_classes":" button button--small button--primary","olivero_secondary_button_classes":" button button--small","close_button_action":"close_banner","open_by_default":true,"modules_allow_popup":true,"hide_the_banner":false,"geoip_match":true},"user":{"uid":0,"permissionsHash":"a10a82d6d58b94ecaa8d251e761a2d8af6514d6fc9d0afa9e3665236bd169517"}}</script>
 <script src="https://www.marinha.mil.br/papem/core/assets/vendor/jquery/jquery.min.js?v=3.7.0"></script>
 <script src="https://www.marinha.mil.br/papem/core/assets/vendor/once/once.min.js?v=1.0.1"></script>
@@ -1605,6 +1506,5 @@ $(document).ready(function(){
 <script src="https://www.marinha.mil.br/papem/core/assets/vendor/js-cookie/js.cookie.min.js?v=3.0.5"></script>
 <script src="https://www.marinha.mil.br/papem/sites/all/modules/eu_cookie_compliance/js/eu_cookie_compliance.min.js?v=10.1.6" defer></script>
 
- </body>
+  </body>
 </html>
-
